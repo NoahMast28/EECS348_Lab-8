@@ -98,10 +98,10 @@ void Matrix::swap_cols(std::size_t c1, std::size_t c2) {
 void Matrix::print_matrix() const {
     std::size_t N = data.size(); // Gets the size of the matrices we are working with
 
-    for (std::size_t i = 0; i <  N; i++) {
-        for (std::size_t j = 0; j <  N; j++) {
-            std::cout << data[i][j] << " ";
+    for (std::size_t i = 0; i <  N; i++) { // Iterates over each row in the matrix
+        for (std::size_t j = 0; j <  N; j++) { // Iterates over each column in the matrix
+            std::cout << data[i][j] << " "; // Prints the jth element in the ith row
         }
-        std::cout << std::endl;
+        std::cout << std::endl; // Prints a newline for each new row
     }
 }
