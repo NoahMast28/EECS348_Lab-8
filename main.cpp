@@ -15,6 +15,12 @@ int main(int argc, char *argv[]) {
     std::size_t N; // Declares a variable for the size of the array
     file >> N; // Puts the size of the array into the variable
 
+    // Returns an error if the size is zero
+    if (N == 0 ) {
+        std:cerr << "Matrix size cannot be zero." << std::endl;
+        return 1;
+    }
+
     std::vector<std::vector<int>> matrix_1(N, std::vector<int>(N)); // Creates an array of size N for the first matrix
     std::vector<std::vector<int>> matrix_2(N, std::vector<int>(N)); // Creates an array of size N for the second matrix
     
