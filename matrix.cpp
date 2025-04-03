@@ -80,12 +80,18 @@ int Matrix::sum_diagonal_minor() const {
 
 // Swaps two rows in a matrix
 void Matrix::swap_rows(std::size_t r1, std::size_t r2) {
-
+    if (r1 < data.size() && r2 < data.size()) { // Checks if the rows are within the bounds of the matrix
+        std::swap(data[r1], data[r2]); // Swaps the two rows
+    }
 }
 
 // Swaps two columns in a matrix
 void Matrix::swap_cols(std::size_t c1, std::size_t c2) {
-
+    if (c1 < data.size() && c2 < data.size()) { // Checks if the columns are within the bounds of the matrix
+        for (std::size_t i = 0; i < data.size(); i++) { // Iterates over each row in the matrix
+            std::swap(data[i][c1], data[i][c2]); // Swaps the two column values in the ith row
+        }
+    }
 }
 
 // Prints the matrix
