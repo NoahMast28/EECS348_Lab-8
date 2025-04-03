@@ -17,7 +17,7 @@ int main(int argc, char *argv[]) {
 
     // Returns an error if the size is zero
     if (N == 0 ) {
-        std:cerr << "Matrix size cannot be zero." << std::endl;
+        std::cerr << "Matrix size cannot be zero." << std::endl;
         return 1;
     }
 
