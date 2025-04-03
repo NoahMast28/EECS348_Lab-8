@@ -43,11 +43,19 @@ Matrix Matrix::operator*(const Matrix &rhs) const {
 
 // Sets a given value in a matrix
 void Matrix::set_value(std::size_t i, std::size_t j, int n) {
+    // Throws error if the index is out of range
+    if (i >= data.size() || j >= data.size()) {
+        throw std::out_of_range("Index out of range");
+    }
     data[i][j] = n;
 }
 
 // Returns a value from a given place in a matrix
 int Matrix::get_value(std::size_t i, std::size_t j) const {
+    // Throws error if the index is out of range
+    if (i >= data.size() || j >= data.size()) {
+        throw std::out_of_range("Index out of range");
+    }
     return data[i][j];
 }
 
