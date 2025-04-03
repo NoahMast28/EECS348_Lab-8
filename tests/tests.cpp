@@ -33,7 +33,7 @@ TEST(MatrixImplementation, GetValue_Basic) {
     Matrix matrix(expected);
 
     for (int i = 0; i < expected.size(); i++) {
-        for (int j = 0; i < expected.size(); i++) {
+        for (int j = 0; j < expected.size(); j++) {
             EXPECT_EQ(matrix.get_value(i, j), expected[i][j]);
         }
     }
@@ -50,7 +50,7 @@ TEST(MatrixImplementation, GetValue_Random) {
     Matrix matrix(expected);
 
     for (int i = 0; i < expected.size(); i++) {
-        for (int j = 0; i < expected.size(); i++) {
+        for (int j = 0; j < expected.size(); j++) {
             EXPECT_EQ(matrix.get_value(i, j), expected[i][j]);
         }
     }
@@ -71,13 +71,13 @@ TEST(MatrixImplementation, SetValue_Basic) {
     Matrix matrix(initial);
 
     for (int i = 0; i < expected.size(); i++) {
-        for (int j = 0; i < expected.size(); i++) {
+        for (int j = 0; j < expected.size(); j++) {
             matrix.set_value(i, j, expected[i][j]);
         }
     }
 
     for (int i = 0; i < expected.size(); i++) {
-        for (int j = 0; i < expected.size(); i++) {
+        for (int j = 0; j < expected.size(); j++) {
             EXPECT_EQ(matrix.get_value(i, j), expected[i][j]);
         }
     }
@@ -100,13 +100,13 @@ TEST(MatrixImplementation, SetValue_Random) {
     Matrix matrix(initial);
 
     for (int i = 0; i < expected.size(); i++) {
-        for (int j = 0; i < expected.size(); i++) {
+        for (int j = 0; j < expected.size(); j++) {
             matrix.set_value(i, j, expected[i][j]);
         }
     }
 
     for (int i = 0; i < expected.size(); i++) {
-        for (int j = 0; i < expected.size(); i++) {
+        for (int j = 0; j < expected.size(); j++) {
             EXPECT_EQ(matrix.get_value(i, j), expected[i][j]);
         }
     }
